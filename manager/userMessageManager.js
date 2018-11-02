@@ -3,9 +3,11 @@
  */
 "use strict";
 
-const userMessageConsumer = (data) => {
+const userMessageManager = (data) => {
   const {from, to, message} = data;
   console.log(`from: ${from}, to: ${to}, concent: ${message}`);
 };
 
-module.exports = {name: 'userMessage', fn: userMessageConsumer, noAck: true};
+module.exports = {
+  userMessageManager,
+};
